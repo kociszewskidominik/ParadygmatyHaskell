@@ -65,10 +65,10 @@ main = do
 ```
 
 
-##ZAD. 2
-###Napisz funkcję, która pobiera trzy liczby i zwraca różnicę między największą i najmniejszą liczbą.
-###>>> minmax 7 1 4
-###6
+## ZAD. 2
+### Napisz funkcję, która pobiera trzy liczby i zwraca różnicę między największą i najmniejszą liczbą.
+### >>> minmax 7 1 4
+### 6
 ```Huskell
 funkcja :: (Ord a, Num a) => a -> a -> a -> a
 funkcja x y z = maximum [x, y, z] - minimum [x, y, z]
@@ -84,12 +84,16 @@ main = do
     putStrLn $ "roznica: " ++ show (funkcja x y z)
 ```
 Deklaracja funkcji.
+
+
 "nazwa" :: "ograniczenia typów (Ord a, oznacza że typ musi wspierać porównania jak np.: **<**, **>**. A Num a, że typ musi być numeryczny)" => "bierze trzy argumenty tego samego typu **a** i zwraca wynik też typu **a**". 
 ```Huskell
 funkcja :: (Ord a, Num a) => a -> a -> a -> a
 
 ```
 Ciało funkcji.
+
+
 Funkcja tworzy listę trzech elementów **x**, **y** i **z** i odejmuję najmniejszą zmienną z trzech **minimum [x, y, z]** od największej **maximum [x, y, z]**
 ```Huskell
 
