@@ -53,7 +53,7 @@ fib n = func n 0 1
 
 Funckja main.
 
-Pobieramy od użytkownika wartość do zmiennej **input** za pomocą **getLine**, następnie przypisujemy tę wartość do zmiennej **n** (**::Integer** mówi że typ musi być dokładnie intem).
+Pobieramy od użytkownika wartość do zmiennej **input** za pomocą **getLine**, następnie przypisujemy tę wartość do zmiennej **n** ("**::Integer**" mówi że typ musi być dokładnie intem).
 
 Na koniec wypisujemy funkcję za pomocą **putStrLn** i **++ show(...)**.
 ```Huskell
