@@ -28,22 +28,22 @@ Ciało funkcji.
 Do wykonania funkcji **fib** potrzebujemy pomocniczej funkcji **func** z trzema argumentami:
 
 
-  · n - bieżąca wartość.
+  - n - bieżąca wartość.
 
   
-  · 0 - wartość **F0** dla ciągu Fibonacciego.
+  - 0 - wartość **F0** dla ciągu Fibonacciego.
 
   
-  · 1 - wartość **F1**.
+  - 1 - wartość **F1**.
 
   
 Gdzie:
 
 
-  · Jeśli pierwszy argument funkcji to **0**, zwracamy **a**, trzeci pomijamy bo "**_**".
+  - Jeśli pierwszy argument funkcji to **0**, zwracamy **a**, trzeci pomijamy bo "**_**".
 
   
-  · A dla każdego kolejnego **n** większego od 0, zmniejszamy licznik i przesuwamy dwa ostatnie wyrazy, aż dojdziemy do żądanego przez nas wyrazu.
+  - A dla każdego kolejnego **n** większego od 0, zmniejszamy licznik i przesuwamy dwa ostatnie wyrazy, aż dojdziemy do żądanego przez nas wyrazu.
 ```Huskell
 fib n = func n 0 1
   where
