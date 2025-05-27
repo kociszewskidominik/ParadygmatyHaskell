@@ -89,16 +89,49 @@ Deklaracja funkcji.
 "nazwa" :: "ograniczenia typów (Ord a, oznacza że typ musi wspierać porównania jak np.: **<**, **>**. A Num a, że typ musi być numeryczny)" => "bierze trzy argumenty tego samego typu **a** i zwraca wynik też typu **a**". 
 ```Huskell
 funkcja :: (Ord a, Num a) => a -> a -> a -> a
-
 ```
 Ciało funkcji.
 
 
 Funkcja tworzy listę trzech elementów **x**, **y** i **z** i odejmuję najmniejszą zmienną z trzech **minimum [x, y, z]** od największej **maximum [x, y, z]**
 ```Huskell
-
 funkcja x y z = maximum [x, y, z] - minimum [x, y, z]
 ```
+
+## ZAD. 3
+### Zaimplementuj funkcję, która pobiera dwie liczby i znajduje sumę ich kwadratów.
+### >>> sumOfSquares 3 4
+### 25
+```Huskell
+funkcja :: (Num a) => a -> a -> a
+funkcja x y = x * x + y * y
+
+main :: IO ()
+main = do
+    zmienna1 <- getLine
+    zmienna2 <- getLine
+    let x = read zmienna1 :: Integer
+        y = read zmienna2 :: Integer
+    putStrLn $ "suma kwadratow: " ++ show (funkcja x y)
+```
+Deklaracja funkcji.
+
+
+"nazwa funkcji" :: "podobnie jak wyżej ograniczenie typu do numerycznego" => "bierze dwa argumenty typu **a** i zwraca ten sam typ **a**".
+```Huskell
+funkcja :: (Num a) => a -> a -> a
+```
+
+Ciało funkcji.
+
+
+Funkcja przyjmuje dwie zmienne **x** i **y**, następnie sumuję ich kwadraty.
+```Huskell
+funkcja x y = x * x + y * y
+```
+
+## ZAD. 4
+### Napisz funkcję **onlyEven**, która przyjmuje listę liczb całkowitych i zwraca listę zawierającą tylko liczby parzyste.
 
 
 
