@@ -1,8 +1,8 @@
 # Paradygmaty Programowania
-### Łatwe zadania powtórzeniowe w języku Huskell.
+### Łatwe zadania powtórzeniowe w języku Haskell.
 ## ZAD. 1
 ### Napisz funkcję wyznaczającą kolejne wyrazy ciągu Fibonacciego.
-```Huskell
+```haskell
 fib :: Integer -> Integer
 fib n = func n 0 1
   where
@@ -18,14 +18,14 @@ main = do
 Deklaracja funkcji.
 
 
-"nazwa funkcji" **::** "co bierze" **->** "co zwraca" 
-```Huskell
+"nazwa funkcji" `::` "co bierze" `->` "co zwraca" 
+```haskell
 fib :: Integer -> Integer
 ```
 Ciało funkcji.
 
 
-Do wykonania funkcji **fib** potrzebujemy pomocniczej funkcji **func** z trzema argumentami:
+Do wykonania funkcji `fib` potrzebujemy pomocniczej funkcji `func` z trzema argumentami:
 
 
   - n - bieżąca wartość.
@@ -40,23 +40,23 @@ Do wykonania funkcji **fib** potrzebujemy pomocniczej funkcji **func** z trzema 
 Gdzie:
 
 
-  - Jeśli pierwszy argument funkcji to **0**, zwracamy **a**, trzeci pomijamy bo "**_**".
+  - Jeśli pierwszy argument funkcji to `0`, zwracamy `a`, trzeci pomijamy bo `_`.
 
   
-  - A dla każdego kolejnego **n** większego od 0, zmniejszamy licznik i przesuwamy dwa ostatnie wyrazy, aż dojdziemy do żądanego przez nas wyrazu.
-```Huskell
+  - A dla każdego kolejnego `n` większego od 0, zmniejszamy licznik i przesuwamy dwa ostatnie wyrazy, aż dojdziemy do żądanego przez nas wyrazu.
+```haskell
 fib n = func n 0 1
   where
     func 0 a _ = a
     func n a b = func (n - 1) b (a + b)
 ```
 
-Funckja main.
+Funkcja \main`.`
 
-Pobieramy od użytkownika wartość do zmiennej **input** za pomocą **getLine**, następnie przypisujemy tę wartość do zmiennej **n** ("**::Integer**" mówi że typ musi być dokładnie intem).
+Pobieramy od użytkownika wartość do zmiennej `input` za pomocą `getLine`, następnie przypisujemy tę wartość do zmiennej `n` (`::Integer` mówi że typ musi być typu `Integer`).
 
-Na koniec wypisujemy funkcję za pomocą **putStrLn** i **++ show(...)**.
-```Huskell
+Na koniec wypisujemy funkcję za pomocą `putStrLn` i `++ show(...)`.
+```haskell
 main :: IO ()
 main = do
     input <- getLine
@@ -69,7 +69,7 @@ main = do
 ### Napisz funkcję, która pobiera trzy liczby i zwraca różnicę między największą i najmniejszą liczbą.
 ### >>> minmax 7 1 4
 ### 6
-```Huskell
+```haskell
 funkcja :: (Ord a, Num a) => a -> a -> a -> a
 funkcja x y z = maximum [x, y, z] - minimum [x, y, z]
 
@@ -86,15 +86,15 @@ main = do
 Deklaracja funkcji.
 
 
-"nazwa" :: "ograniczenia typów (Ord a, oznacza że typ musi wspierać porównania jak np.: **<**, **>**. A Num a, że typ musi być numeryczny)" => "bierze trzy argumenty tego samego typu **a** i zwraca wynik też typu **a**". 
-```Huskell
+"nazwa" :: "ograniczenia typów (Ord a, oznacza że typ musi wspierać porównania jak np.: `<`, `>`. A Num a, że typ musi być numeryczny)" => "bierze trzy argumenty tego samego typu `a` i zwraca wynik też typu `a`". 
+```haskell
 funkcja :: (Ord a, Num a) => a -> a -> a -> a
 ```
 Ciało funkcji.
 
 
-Funkcja tworzy listę trzech elementów **x**, **y** i **z** i odejmuję najmniejszą zmienną z trzech **minimum [x, y, z]** od największej **maximum [x, y, z]**
-```Huskell
+Funkcja tworzy listę trzech elementów `x`, `y` i `z` i odejmuję najmniejszą zmienną z trzech `minimum [x, y, z]` od największej `maximum [x, y, z]`.
+```haskell
 funkcja x y z = maximum [x, y, z] - minimum [x, y, z]
 ```
 
@@ -102,7 +102,7 @@ funkcja x y z = maximum [x, y, z] - minimum [x, y, z]
 ### Zaimplementuj funkcję, która pobiera dwie liczby i znajduje sumę ich kwadratów.
 ### >>> sumOfSquares 3 4
 ### 25
-```Huskell
+```haskell
 funkcja :: (Num a) => a -> a -> a
 funkcja x y = x * x + y * y
 
@@ -117,22 +117,22 @@ main = do
 Deklaracja funkcji.
 
 
-"nazwa funkcji" :: "podobnie jak wyżej ograniczenie typu do numerycznego" => "bierze dwa argumenty typu **a** i zwraca ten sam typ **a**".
-```Huskell
+"nazwa funkcji" :: "podobnie jak wyżej ograniczenie typu do numerycznego" => "bierze dwa argumenty typu `a` i zwraca ten sam typ `a`".
+```haskell
 funkcja :: (Num a) => a -> a -> a
 ```
 
 Ciało funkcji.
 
 
-Funkcja przyjmuje dwie zmienne **x** i **y**, następnie sumuję ich kwadraty.
-```Huskell
+Funkcja przyjmuje dwie zmienne `x` i `y`, następnie sumuję ich kwadraty.
+```haskell
 funkcja x y = x * x + y * y
 ```
 
 ## ZAD. 4
 ### Napisz funkcję onlyEven, która przyjmuje listę liczb całkowitych i zwraca listę zawierającą tylko liczby parzyste.
-```Huskell
+```haskell
 onlyEven :: [Int] -> [Int]
 onlyEven xs = filter even xs
 
@@ -143,19 +143,19 @@ Deklaracja funkcji.
 
 
 "nazwa funkcji" :: "przyjmuję listę liczb całkowitych" => "zwraca listę liczb całkowitych"
-```Huskell
+```haskell
 onlyEven :: [Int] -> [Int]
 ```
 Ciało funkcji.
 
 
-Funkcja przyjmuję jeden argument **xs**, i za pomocą funkcji **filter** i **even** z autmatycznie wbudowanej biblioteki, wybiera z listy tylko parzyste liczby.
-```Huskell
+Funkcja przyjmuję jeden argument `xs`, i za pomocą funkcji `filter` i `even` z autmatycznie wbudowanej biblioteki, wybiera z listy tylko parzyste liczby.
+```haskell
 onlyEven xs = filter even xs
 ```
 ## ZAD. 5
 ### Napisz funkcję doubleAll, która przyjmuje listę liczb całkowitych i zwraca listę, w której każda liczba jest podwojona.
-```Huskell
+```haskell
 doubleAll :: [Int] -> [Int]
 doubleAll xs = map (*2) xs
 
@@ -164,7 +164,7 @@ main = print (doubleAll [6, 9, 2137, 2, 6, 8, 420])
 ```
 ## ZAD. 6
 ### Napisz funkcję sumOfDigits, która dla danej liczby całkowitej zwróci sumę jej cyfr.
-```Huskell
+```haskell
 sumOfDigits :: Int -> Int
 sumOfDigits n = sum (map (\x -> read [x]) (show (abs n)))
 
