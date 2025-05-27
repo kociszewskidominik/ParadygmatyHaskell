@@ -1,3 +1,3 @@
 # Paradygmaty Programowania
-# Łatwe zadania powtórzeniowe
-## ZAD. 1
+### Łatwe zadania powtórzeniowe
+### ZAD. 1
