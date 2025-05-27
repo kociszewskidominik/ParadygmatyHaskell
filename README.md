@@ -51,7 +51,7 @@ fib n = func n 0 1
     func n a b = func (n - 1) b (a + b)
 ```
 
-Funkcja \main`.`
+Funkcja `main`.
 
 Pobieramy od użytkownika wartość do zmiennej `input` za pomocą `getLine`, następnie przypisujemy tę wartość do zmiennej `n` (`::Integer` mówi że typ musi być typu `Integer`).
 
