@@ -131,10 +131,46 @@ funkcja x y = x * x + y * y
 ```
 
 ## ZAD. 4
-### Napisz funkcję **onlyEven**, która przyjmuje listę liczb całkowitych i zwraca listę zawierającą tylko liczby parzyste.
+### Napisz funkcję onlyEven, która przyjmuje listę liczb całkowitych i zwraca listę zawierającą tylko liczby parzyste.
+```Huskell
+onlyEven :: [Int] -> [Int]
+onlyEven xs = filter even xs
+
+main :: IO ()
+main = print (onlyEven [1, 2, 3, 4, 5, 6, 2, 2137, 56, 12, 2])
+```
+Deklaracja funkcji.
 
 
+"nazwa funkcji" :: "przyjmuję listę liczb całkowitych" => "zwraca listę liczb całkowitych"
+```Huskell
+onlyEven :: [Int] -> [Int]
+```
+Ciało funkcji.
 
+
+Funkcja przyjmuję jeden argument **xs**, i za pomocą funkcji **filter** i **even** z autmatycznie wbudowanej biblioteki, wybiera z listy tylko parzyste liczby.
+```Huskell
+onlyEven xs = filter even xs
+```
+## ZAD. 5
+### Napisz funkcję doubleAll, która przyjmuje listę liczb całkowitych i zwraca listę, w której każda liczba jest podwojona.
+```Huskell
+doubleAll :: [Int] -> [Int]
+doubleAll xs = map (*2) xs
+
+main :: IO ()
+main = print (doubleAll [6, 9, 2137, 2, 6, 8, 420])
+```
+## ZAD. 6
+### Napisz funkcję sumOfDigits, która dla danej liczby całkowitej zwróci sumę jej cyfr.
+```Huskell
+sumOfDigits :: Int -> Int
+sumOfDigits n = sum (map (\x -> read [x]) (show (abs n)))
+
+main :: IO ()
+main = print (sumOfDigits 2137)
+```
 
 
 
