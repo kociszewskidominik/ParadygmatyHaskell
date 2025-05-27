@@ -2,6 +2,10 @@
 ### Łatwe zadania powtórzeniowe w języku Huskell
 ## ZAD. 1
 ### Napisz funkcję wyznaczającą kolejne wyrazy ciągu Fibonacciego.
+```Huskell
+fib :: Integer -> Integer
+```
+"nazwa funkcji" :: "co bierze" -> "co zwraca" 
 
 ```Huskell
 fib :: Integer -> Integer
