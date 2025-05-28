@@ -67,8 +67,6 @@ main = do
 
 ## ZAD. 2
 ### Napisz funkcję, która pobiera trzy liczby i zwraca różnicę między największą i najmniejszą liczbą.
-### >>> minmax 7 1 4
-### 6
 ```haskell
 funkcja :: (Ord a, Num a) => a -> a -> a -> a
 funkcja x y z = maximum [x, y, z] - minimum [x, y, z]
@@ -100,8 +98,6 @@ funkcja x y z = maximum [x, y, z] - minimum [x, y, z]
 
 ## ZAD. 3
 ### Zaimplementuj funkcję, która pobiera dwie liczby i znajduje sumę ich kwadratów.
-### >>> sumOfSquares 3 4
-### 25
 ```haskell
 funkcja :: (Num a) => a -> a -> a
 funkcja x y = x * x + y * y
