@@ -167,3 +167,25 @@ sumOfDigits n = sum (map (\x -> read [x]) (show (abs n)))
 main :: IO ()
 main = print (sumOfDigits 2137)
 ```
+
+## ZADANIE
+### Zdefiniuj predykat należy(X, Lista), który sprawdza, czy element X należy do listy Lista. Na przykład należy(a, [a, b, c]). powinno zwrócić true.
+```prolog
+należy(X, [X|_]).
+należy(X, [_|Ogon]) :- należy(X, Ogon).
+```
+## ZADANIE
+### Zdefiniuj predykat długość(Lista, Dł), który oblicza długość listy Lista i zapisuje ją w Dł.
+```prolog
+długość([], 0).
+długość([_|Ogon], Dł) :- długość(Ogon, Dł1), Dł is Dł1 + 1.
+```
+## ZADANIE
+### Zdefiniuj predykat odwróć(Lista, Odwrocona), który zwraca listę w odwrotnej kolejności. Na przykład odwróć([1,2,3], X) powinno zwrócić X = [3,2,1].
+```prolog
+reverse(List, Reversed) :- reverse(List, [], Reversed).
+
+reverse([], Acc, Acc).
+reverse([H|T], Acc, Result) :-
+    reverse(T, [H|Acc], Result).
+```
